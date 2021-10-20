@@ -1,4 +1,5 @@
 import React from 'react'
+import { HighlightCard } from '../../components/HighlightCard'
 import {
   Container,
   Header,
@@ -6,23 +7,51 @@ import {
   Photo,
   User,
   UserGreeting,
-  UserName
+  UserName,
+  UserWrapper,
+  Icon,
+  HighlightCards
 } from './styles'
+
 
 export function Dashboard() {
   return (
     <Container>
       <Header>
-        <UserInfo>
-          <Photo 
-            source={{ uri: 'https://images.unsplash.com/photo-1634351583902-0216460f6413?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80'}} 
-          />
-          <User>
-            <UserGreeting>Olá, </UserGreeting>
-            <UserName>Fabricio</UserName>
-          </User>
-        </UserInfo>
+        <UserWrapper>
+          <UserInfo>
+            <Photo
+              source={{ uri: 'https://avatars.githubusercontent.com/u/68553208?v=4' }}
+            />
+            <User>
+              <UserGreeting>Olá, </UserGreeting>
+              <UserName>Fabricio</UserName>
+            </User>
+          </UserInfo>
+          <Icon name="power" />
+        </UserWrapper>
       </Header>
+
+      <HighlightCards>
+        <HighlightCard 
+          type="up"
+          title="Entradas" 
+          amount="R$ 17.400,00" 
+          lastTransaction="Última entrada dia 13 de abril"
+        />
+         <HighlightCard 
+          type="down"
+          title="Saídas" 
+          amount="R$ 1.259,00" 
+          lastTransaction="Última saída dia 13 de abril"
+        />
+         <HighlightCard 
+          type="total"
+          title="Total" 
+          amount="R$ 16.141,00" 
+          lastTransaction="01 à 16 de abril"
+        />
+      </HighlightCards>
     </Container>
   )
 }
