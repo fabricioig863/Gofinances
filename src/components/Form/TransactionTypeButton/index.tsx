@@ -6,10 +6,10 @@ import {
   Title, 
   Icon
 } from './styles'
-
+  
 const icons = {
+  down: 'arrow-down-circle',
   up: 'arrow-up-circle',
-  down: 'arrow-down-circle'
 }
 
 interface Props extends TouchableOpacityProps {
