@@ -12,6 +12,7 @@ import {
 } from '@expo-google-fonts/poppins'
 
 import { Register } from './src/screens/Register';
+import { StatusBar } from 'expo-status-bar';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -26,6 +27,11 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
+      <StatusBar 
+        style="light"
+        translucent
+        backgroundColor='transparent'
+      />
       <Register />
     </ThemeProvider>
   );

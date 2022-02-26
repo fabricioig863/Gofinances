@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { Modal } from 'react-native';
+import { useForm } from 'react-hook-form';
 
+import { InputForm } from '../../components/Form/InputForm';
 import { Button } from '../../components/Form/Button';
-import { Input } from '../../components/Form/Input'
 import { TransactionTypeButton } from '../../components/Form/TransactionTypeButton';
 import { CategorySelectButton } from '../../components/Form/CategorySelectButton';
 import { CategorySelect } from '../CategorySelect';
@@ -16,6 +17,11 @@ import {
   TransactionsType
 } from './styles';
 
+export type FormData = {
+  [name: string]: any;
+  amount: string;
+}
+
 export function Register() {
   const [transactionType, setTransactionType] = useState('')
   const [categorySelectModalOpen, setCategorySelectModalOpen] = useState(false);
@@ -24,6 +30,11 @@ export function Register() {
     key: 'category',
     name: 'Categoria',
   })
+
+  const {
+    control,
+    handleSubmit
+  } =  useForm ()
 
   function handleTransactionsTypeSelect(type: 'up' | 'down') {
     setTransactionType(type);
@@ -37,6 +48,16 @@ export function Register() {
     setCategorySelectModalOpen(false)
   }
 
+  function handleRegister(form: Partial<FormData>){
+    const dataFormRegister = {
+      amount: form.amount,
+      name: form.name,
+      transactionType,
+      category: category.key
+    }
+    console.log('Log: dataFormRegsiter', dataFormRegister)
+  }
+
 
   return (
     <Container>
@@ -46,11 +67,15 @@ export function Register() {
 
       <Form>
         <Fields>
-          <Input
+          <InputForm
+            name="name"
+            control={control}
             placeholder="Nome"
           />
 
-          <Input
+          <InputForm
+            name="amount"
+            control={control}
             placeholder="Preço"
           />
 
@@ -77,6 +102,7 @@ export function Register() {
 
         <Button
           title="Enviar"
+          onPress={handleSubmit(handleRegister)}
         />
       </Form>
 
