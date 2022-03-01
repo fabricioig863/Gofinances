@@ -3,6 +3,8 @@ import { ThemeProvider } from 'styled-components';
 import AppLoading from 'expo-app-loading';
 import theme from './src/global/styles/theme';
 
+import { NavigationContainer } from '@react-navigation/native';
+import { AppRoutes } from './src/routes/app.routes';
 // Components
 import {
   useFonts,
@@ -11,7 +13,6 @@ import {
   Poppins_700Bold
 } from '@expo-google-fonts/poppins'
 
-import { Register } from './src/screens/Register';
 import { StatusBar } from 'expo-status-bar';
 
 export default function App() {
@@ -21,18 +22,20 @@ export default function App() {
     Poppins_700Bold
   })
 
-  if(!fontsLoaded){
+  if (!fontsLoaded) {
     return <AppLoading />
   }
 
   return (
     <ThemeProvider theme={theme}>
-      <StatusBar 
+      <StatusBar
         style="light"
         translucent
         backgroundColor='transparent'
       />
-      <Register />
+      <NavigationContainer>
+        <AppRoutes />
+      </NavigationContainer>
     </ThemeProvider>
   );
 }
