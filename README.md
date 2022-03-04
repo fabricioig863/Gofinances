@@ -19,7 +19,8 @@
 </p>
 
 <h1 align="center">
-  <video alt="Home" autoplay loop src="https://res.cloudinary.com/fabricioig863/video/upload/v1646351237/20220303_204543_ulldzp.mp4" width="400px" />
+  <img alt="Home" src="https://res.cloudinary.com/fabricioig863/image/upload/v1646353179/20220303_205431_t6mxzu.gif" width="350px" />
+  <img alt="Home" src="https://res.cloudinary.com/fabricioig863/image/upload/v1646353621/20220303_212553_j4jvli.gif" width="350px" />
 </h1>
 
 ## :page_with_curl: About
