@@ -28,7 +28,6 @@ tenologias utilizadas no decorrer do projeto:
 - [TypeScript](https://www.typescriptlang.org/)
 - [React Navigation](https://reactnavigation.org/)
 - [React Native Gesture Handler](https://kmagiera.github.io/react-native-gesture-handler/)
-- [React Navigation Shared Element](https://github.com/IjzerenHein/react-navigation-shared-element)
 - [Styled Components](https://styled-components.com/)
 - [@expo/vector-icons](https://docs.expo.io/guides/icons/)
 
