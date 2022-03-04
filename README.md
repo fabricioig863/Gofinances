@@ -19,8 +19,7 @@
 </p>
 
 <h1 align="center">
-  <video alt="Home" autoplay loop src="https://res.cloudinary.com/fabricioig863/video/upload/v1646349611/20220303_195846_gnrkmu.mp4" width="400" />
-  <video alt="Home" autoplay loop src="https://res.cloudinary.com/fabricioig863/video/upload/v1646351237/20220303_204543_ulldzp.mp4" width="400" />
+  <video alt="Home" autoplay loop src="https://res.cloudinary.com/fabricioig863/video/upload/v1646351237/20220303_204543_ulldzp.mp4" width="400px" />
 </h1>
 
 ## :page_with_curl: About
