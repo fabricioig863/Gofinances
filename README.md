@@ -6,7 +6,7 @@
   <a href="#page_with_curl-sobre">Sobre</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#hammer-technologias">Tecnologias</a>
   &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#books-requerimentos">Requerimentos</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#books-requisitos">Requisitos</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#rocket-como-executar-o-projeto-?">Como Executar o projeto ?</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#thought_balloon-criador">Criador</a>
 </p>
@@ -31,7 +31,7 @@ tenologias utilizadas no decorrer do projeto:
 - [Styled Components](https://styled-components.com/)
 - [@expo/vector-icons](https://docs.expo.io/guides/icons/)
 
-## :books: Requirements
+## :books: Requisitos 
 - Para ter o [**Git**](https://git-scm.com/) instalado em sua máquina.
 - Um dispositivo ou emulador iOS ou Android.
 
