@@ -49,9 +49,6 @@ tenologias utilizadas no decorrer do projeto:
 
   # Intall expo
   $ expo start
-
-   # Init app:
-  $ yarn start
 ```
 
 
