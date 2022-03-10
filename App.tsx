@@ -1,7 +1,7 @@
-import React from 'react';
 import 'intl';
 import 'intl/locale-data/jsonp/pt-BR';
 
+import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import AppLoading from 'expo-app-loading';
 import theme from './src/global/styles/theme';

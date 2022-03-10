@@ -29,13 +29,13 @@ export interface DataListProps extends TransactionCardProps {
 export function Dashboard() {
   const [data, setData] = useState<DataListProps[]>([]);
 
-  async function loadTransactions(){
-    const dataKey = '@gofinances:transactions';
+  async function loadTransactions() {
+    const dataKey = '@gofinances:transactions'
     const response = await AsyncStorage.getItem(dataKey);
     const transactions = response ? JSON.parse(response) : [];
 
-    const transactionsFormatted: DataListProps[] = 
-    transactions.map((item: DataListProps) => {
+    const transactionsFormatted: DataListProps[] = transactions
+    .map((item: DataListProps) => {
       const amount = Number(item.amount)
       .toLocaleString('pt-BR', {
         style: 'currency',
@@ -49,22 +49,17 @@ export function Dashboard() {
       }).format(new Date(item.date));
 
       return {
-        id: item.id,
-        name: item.name,
+        ...item,
         amount,
-        type: item.type,
-        category: item.category,
-        date,
+        date
       }
-
-    });
+    })
 
     setData(transactionsFormatted);
-
   }
 
   useEffect(() => {
-    loadTransactions()
+    loadTransactions();
   }, [])
  
   return (
