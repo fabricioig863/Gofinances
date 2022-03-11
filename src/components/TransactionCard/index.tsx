@@ -1,15 +1,8 @@
 import React from 'react';
 import { categories } from '../../utils/categories';
 import {
-  Container,
-  Title,
-  Amount,
-  Footer,
-  Category,
-  Icon,
-  CategoryName,
-  Date
-} from './styles'
+  Amount, Category, CategoryName, Container, Date, Footer, Icon, Title
+} from './styles';
 
 export interface TransactionCardProps {
   type: 'positive' | 'negative';

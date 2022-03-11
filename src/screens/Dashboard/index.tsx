@@ -1,26 +1,14 @@
-import React, { useState, useEffect } from 'react'
 import AsyncStorage from '@react-native-async-storage/async-storage';
-
-import { HighlightCard } from '../../components/HighlightCard'
-import { TransactionCard, TransactionCardProps } from '../../components/TransactionCard'
-
+import React, { useEffect, useState } from 'react';
+import { HighlightCard } from '../../components/HighlightCard';
+import { TransactionCard, TransactionCardProps } from '../../components/TransactionCard';
+import Img from '../../global/assets/image.png';
 import {
   Container,
-  Header,
-  UserInfo,
-  Photo,
-  User,
-  UserGreeting,
-  UserName,
-  UserWrapper,
-  Icon,
-  HighlightCards,
-  Transactions,
-  TransactionList,
-  Title,
-  LougoutButton 
-} from './styles'
-import Img from '../../global/assets/image.png'
+  Header, HighlightCards, Icon, LougoutButton, Photo, Title, TransactionList, Transactions, User,
+  UserGreeting, UserInfo, UserName,
+  UserWrapper
+} from './styles';
 
 export interface DataListProps extends TransactionCardProps {
   id: string;
@@ -34,8 +22,7 @@ export function Dashboard() {
     const response = await AsyncStorage.getItem(dataKey);
     const transactions = response ? JSON.parse(response) : [];
 
-    const transactionsFormatted: DataListProps[] = transactions
-    .map((item: DataListProps) => {
+    const transactionsFormatted: DataListProps[] = transactions.map((item: DataListProps) => {
       const amount = Number(item.amount)
       .toLocaleString('pt-BR', {
         style: 'currency',
@@ -54,12 +41,17 @@ export function Dashboard() {
         date
       }
     })
-
     setData(transactionsFormatted);
   }
 
+  // async function removeItem(){
+  //   await AsyncStorage.removeItem(dataKey)
+  // }
+
+
   useEffect(() => {
     loadTransactions();
+    // removeItem()
   }, [])
  
   return (
