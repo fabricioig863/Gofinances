@@ -101,6 +101,6 @@ export const TransactionList = styled(
   ).attrs({
   showsVerticalScrollIndicator: false,
   contentContainerStyle: {
-    paddingBottom: 10
+    paddingBottom: 10,
   }
 })``;
